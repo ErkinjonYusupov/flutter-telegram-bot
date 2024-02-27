@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shoping_telegram_bot/model/product_model.dart';
+import 'package:shoping_telegram_bot/pages/cart_page.dart';
 import 'package:shoping_telegram_bot/stores/product_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +23,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(user['name']),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart))
+          IconButton(onPressed: () {
+            Get.to(()=>const CartPage());
+          }, icon: const Icon(Icons.shopping_cart))
         ],
       ),
       body: ListView.builder(

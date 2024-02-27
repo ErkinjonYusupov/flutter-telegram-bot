@@ -27,6 +27,7 @@ class ProductController extends GetxController {
       });
     }
     base.write('cart-product', cartProducts);
-    Get.snackbar("Bajarildi", "Mahsulaot qo'shildi");
+    Get.snackbar("Bajarildi", "Mahsulaot qo'shildi",
+        duration: const Duration(milliseconds: 800));
   }
 }
